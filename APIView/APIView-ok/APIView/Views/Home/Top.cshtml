@@ -1,0 +1,162 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="utf-8" />
+    <link href="~/Content/sharestyle.css" rel="stylesheet" />
+    <style type="text/css">
+        .hightCss {
+            color: yellow;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+
+    <script src="~/Scripts/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+        //控制Left视图中菜单模块的显示
+        function showLeftList(divId) {
+            self.parent.frames["leftFrame"].showDivMenu(divId);
+        }
+        //菜单点击高亮显示
+        $(function () {
+            $(".nav_list ul li a").click(function () {
+                //$(".nav_list ul li a").css("color", "#ceebff");
+                //$(this).css("color", "yellow");
+                $(".nav_list ul li a").css("background-color", "");
+                $(".nav_list ul li a").css("color", "#ceebff");
+                $(this).css("background-color", "#66d354");
+                $(this).css("color", "white");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="index_header">
+        <div class="index_headertop">
+            <div class="index_logo">
+                <a href="#">
+                    <img src="/images/index_logo.png" width="190" height="32" >
+                </a>
+            </div>
+            <div class="lgstatus">
+                欢迎您，@ViewBag.UserName<i><em>20</em></i>jhf test</span>&nbsp;&nbsp;&nbsp;
+                @*<input type="submit" value="在线充值" class="btsty2">*@
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="index_headerbot">
+            <div class="nav_list">
+                <ul>
+                    <li>
+                        <a href="#" onclick="showLeftList('divIntretech')">盈趣科技</a>
+                        <div class="nav_out" style="display: none;">
+                            <i></i>
+                            <p><a href="#">YQUMS平台管理</a></p>
+                            <p><a href="#">YQ供应商协同</a></p>
+                            <p><a href="#">YQ慧翰微项目</a></p>
+                            <p><a href="#">YQ物料综合查询</a></p>
+                            <p><a href="#">YQUK3出入库扫描</a></p>
+                        </div>
+                    </li>
+                    <li class="slctd">
+                        <a href="#" onclick="showLeftList('divYQLG')">汽车电子</a>
+                        <div class="nav_out" style="display: none;">
+                            <i></i>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                        </div>
+                    </li>
+                    <li class="slctd">
+                        <a href="#" onclick="showLeftList('divYQNP')">攸信信息</a>
+                        <div class="nav_out" style="display: none;">
+                            <i></i>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                        </div>
+                    </li>
+                    <li class="slctd">
+                        <a href="#" onclick="showLeftList('divInsut')">漳州盈塑</a>
+                        <div class="nav_out" style="display: none;">
+                            <i></i>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                        </div>
+                    </li>
+                    <li class="slctd">
+                        <a href="#" onclick="showLeftList('divINOUT')">盈趣进出口</a>
+                        <div class="nav_out" style="display: none;">
+                            <i></i>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                        </div>
+                    </li>
+                    <li class="slctd">
+                        <a href="#" onclick="showLeftList('divYQML')">盈趣(马来)</a>
+                        <div class="nav_out" style="display: none;">
+                            <i></i>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                        </div>
+                    </li>
+                    <li class="slctd">
+                        <a href="#" onclick="showLeftList('divYQHK')">盈趣(香港)</a>
+                        <div class="nav_out" style="display: none;">
+                            <i></i>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                        </div>
+                    </li>
+                    <li class="slctd">
+                        <a href="#" onclick="showLeftList('divYQXYL')">盈趣(匈牙利)</a>
+                        <div class="nav_out" style="display: none;">
+                            <i></i>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                            <p><a href="#">test</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" onclick="showLeftList('divSysManage')">系统管理</a>
+                        <div class="nav_out" style="display: none;">
+                            <i></i>
+                            <p><a href="#">基本信息管理</a></p>
+                            <p><a href="#">认证管理</a></p>
+                            <p><a href="#">修改密码</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="fucnbx"><span><a href="#"><i class="ilChannel"></i>NS数据下载下载</a></span> <span><a href="#"><i class="i2"></i>API文档</a></span> <span><a href="#"><i class="i3"></i>退出</a></span> </div>
+        </div>
+    </div>
+</body>
+</html>
